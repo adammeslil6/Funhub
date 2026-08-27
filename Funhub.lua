@@ -1,4 +1,4 @@
-local validKey = "ADAM-1234"
+local validKey = "ADAM1234"
 
 if script_key ~= validKey then
     warn("❌ Invalid key")
@@ -7,7 +7,7 @@ end
 
 print("✅ Key valide !")
 
--- ICI tu mets TON SCRIPTlocal function _try(fn, ...) local ok, err = pcall(fn, ...); return ok, err end
+-- TON FUNHUB ICIlocal ok, err = pcall(fn, ...); return ok, err end
 
 _try(function() if setthreadidentity then setthreadidentity(8) end end)
 _try(function() if setidentity then setidentity(8) end end)
