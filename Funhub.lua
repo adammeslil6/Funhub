@@ -1,7 +1,7 @@
 local validKey = "ADAM1234"
 
 if not script_key or script_key ~= validKey then
-    warn("❌ Invalid key")
+    game:GetService("Players").LocalPlayer:Kick("Invalid key - kicked from Fun Hub")
     return
 end
 
