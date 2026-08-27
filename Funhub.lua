@@ -1,13 +1,4 @@
-local validKey = "ADAM1234"
-
-if script_key ~= validKey then
-    warn("❌ Invalid key")
-    return
-end
-
-print("✅ Key valide !")
-
--- TON FUNHUB ICIlocal ok, err = pcall(fn, ...); return ok, err end
+local function _try(fn, ...) local ok, err = pcall(fn, ...); return ok, err end
 
 _try(function() if setthreadidentity then setthreadidentity(8) end end)
 _try(function() if setidentity then setidentity(8) end end)
@@ -7235,6 +7226,16 @@ do
     title.Size     = UDim2.new(1, -100, 0, 14)
     title.Position = UDim2.new(0, 24, 0, 7)
     title.ZIndex   = 61
+    local middleWhiteBar = Instance.new("Frame")
+    middleWhiteBar.Name              = "MiddleWhiteBar"
+    middleWhiteBar.Size              = UDim2.new(0, 70, 0, 2)
+    middleWhiteBar.Position          = UDim2.new(0.5, -35, 0.5, -1)
+    middleWhiteBar.BackgroundColor3  = T.White
+    middleWhiteBar.BorderSizePixel   = 0
+    middleWhiteBar.ZIndex            = 62
+    middleWhiteBar.Parent            = bar
+    Corner(middleWhiteBar, 1)
+
     local pct = Lbl(bar, "0%", 11, T.TextDim, Enum.Font.GothamBold, Enum.TextXAlignment.Right)
     pct.Size     = UDim2.new(0, 80, 0, 14)
     pct.Position = UDim2.new(1, -92, 0, 7)
